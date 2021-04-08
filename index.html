@@ -10,6 +10,8 @@
 <body>
     <div class="nav-bar">
         <div class="logo">Snapshot</div>
+        <strong class="menu-bar">&#9776; </strong>
+        <strong class="exit">&#x2715; </strong>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -103,5 +105,24 @@
         </div>
         <h6>Copyright &copy; 2021 Zuri Training.</h6>
     </div>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links');
+        const menuBar = document.querySelector('.menu-bar');
+        const close = document.querySelector('.exit');
+
+        menuBar.addEventListener('click', function() {
+            navLinks.style.display = 'block';
+            menuBar.style.display = 'none';
+            close.style.display = 'block';
+        });
+
+        close.addEventListener('click', function(){
+            navLinks.style.display = 'none';
+            menuBar.style.display = 'block';
+            close.style.display = 'none';
+        });
+
+    </script>
 </body>
 </html>
